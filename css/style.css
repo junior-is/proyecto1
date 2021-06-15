@@ -1,0 +1,160 @@
+body{
+    background: rgba(0, 0, 0, .9);
+    margin: 0;
+    COLOR: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header::after {
+    content:'';
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/Imagen1.png);
+    background-size: cover;
+    background-repeat: no repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.header:hover::after{
+    filter:blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.header:hover .header-content{
+    filter:blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.header-content{
+    position: absolute;
+    z-index: 5;
+    top: 2%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -155px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 1000ms;
+}
+
+.header-content .logo{
+    height: 200px;
+    width: 200px;
+    filter:blur(0px);
+    -webkit-filter: blur(0px);
+    
+}
+
+.title{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+    
+    
+}
+
+.text{
+    line-height: 2.0;
+    margin-top: 1rem;
+}
+
+.container{
+    max-width:1300px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+
+}
+
+/* grid-template-columns: 1fr 1fr 1fr;
+rid-template-columns: 30px 30px 30px; */
+
+.grid-3{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-2 {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+
+}
+
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light{
+    background: #ffffff;
+    color: #333333;
+}
+
+.hg-light{
+    background: #333333;
+    color: #ffffff;
+
+}
+
+.services{
+    padding: 2rem 0;
+    background: #333333;
+}
+
+footer{
+    padding: 2.2rem;
+
+}
+
+footer p{
+    margin: 0;
+}
+
+@media(max-width: 560px) {
+    .header::after{
+        height: 50vh;
+    }
+    .header-content{
+        top: 5%;
+        margin-top: 5%;
+    }
+    .header-content .logo{
+        height: 80px;
+        width: 80px;
+    }
+    .header-content.text{
+        display: none;
+    }
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .services{
+        padding: 1rem 1rem
+        
+    }
+    .title{
+        font-size: 20px;
+    }  
+    .text{
+        font-size: 20px;
+
+    }
+
+}
+}
+
+    @media(max-height: 560px) {
+        .header-content .text{
+            display:none;
+        }
+
+
